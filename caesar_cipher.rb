@@ -20,7 +20,7 @@ puts "What will be the shift factor?"
 shift_factor = gets.chomp.to_i
 
 result = phrase.reduce("") do |accumulator, current_character|
-  index = ALPHABET.find_index(current_character.t)
+  index = ALPHABET.find_index(current_character.downcase)
   
   if !index
     accumulator += current_character
